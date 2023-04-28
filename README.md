@@ -24,7 +24,7 @@ These functions were defined by hand without using any third-party libraries on 
 _Text in cyan is inferred_
 
 ## ℹ️ Limitations
-- Currently, only greedy decoding is implemented (no temp/top_k). To implement these, you can replace the implementation of the GetBest function in Gpt.cs. For guidance, consult the section "Sampling" [here](https://jaykmody.com/blog/gpt-from-scratch/).
+- Currently, only greedy decoding is implemented (no `temp`/`top_k`). To implement these, you can replace the implementation of the `GetBest` function in `Gpt.cs`. For guidance, consult the section "Sampling" [here](https://jaykmody.com/blog/gpt-from-scratch/).
 - The math used in GPT2# is not accelerated by using a GPU/TPU or SIMD vectorization. While a `Parallel.For()` is used in matrix multiplication, the math is written in a simple, easy-to-understand way rather than being focused on performance. Replacing the naive matrix multiplication with the [Strassen algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm) can provide a significant speedup.
 - The used model is pretty small and dated, don't expect miracles. The first few tokens inferred are generally ok, but due to the lack of [repetition penalty](https://docs.ai21.com/docs/repetition-penalties) and greedy sampling the model stucks in a token loop pretty fast.
 
