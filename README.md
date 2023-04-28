@@ -1,7 +1,7 @@
 # GPT2#
 
 ![logoD](https://user-images.githubusercontent.com/10260230/235049057-7fef9c7d-4f93-4974-9b2a-1263808b3b46.png)  
-GPT2# is a sub-1,000-lines, zero dependencies GPT2 implementation written in C# 11, capable of loading the original weights released by OpenAI.
+GPT2# is a sub-1,000-lines, zero dependencies GPT2 model inference implementation written in C# 11, capable of loading the original weights released by OpenAI.
 
 ## ⚙️ Build
 To get started with GPT2#, make sure `dotnet --version` returns 7.0+. If not, grab your copy of the SDK [here](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).  
