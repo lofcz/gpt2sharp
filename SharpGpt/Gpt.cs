@@ -60,6 +60,7 @@ public class Gpt
         int Solve(string chunk)
         {
             string cpy = chunk;
+            
             int pos = nonEmptyTokenLengths.IndexOf(chunk.Length);
 
             if (pos == -1)
@@ -204,13 +205,13 @@ public class Gpt
             
             Logit GetBest()
             {
-                float maxScore = float.PositiveInfinity;
+                float maxScore = float.NegativeInfinity;
                 int bestIndex = 0;
                 for (int i = 0; i < logits.Count; i++)
                 {
                     float logit = logits[i];
                 
-                    if (logit < maxScore)
+                    if (logit > maxScore)
                     {
                         maxScore = logit;
                         bestIndex = i;
